@@ -20,6 +20,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('plantas', 'PlantaController');
 
+Route::resource('pacientes', 'PacientesController');
+
+
 Route::resource('puestos', 'PuestosController');
 
 Route::resource('areas', 'AreasController');
@@ -27,3 +30,4 @@ Route::resource('areas', 'AreasController');
 Route::resource('diagnosticos', 'DiagnosticosController');
 
 Route::resource('partes_cuerpo', 'Partes_CuerpoController');
+
