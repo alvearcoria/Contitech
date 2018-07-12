@@ -26,7 +26,7 @@
     @endif
 
   <div class="cant" style="margin-top: 10px;">
-    Clientes Totales: {{ $plantas->count() }} 
+    Plantas Totales: {{ $plantas->count() }} 
   </div>
     <div class="table-responsive-sm"    >
     <!--<table id="tab_pac" class="table table-bordered tablesorter" > -->
