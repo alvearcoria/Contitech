@@ -29,7 +29,32 @@
 						<span class="fa fa-medkit icon-menu"></span>Plantas
 					</a>
 				</li>
-				
+
+				<li>
+					<a href="{{ route('puestos.index') }}" >
+						<span class="fa fa-medkit icon-menu"></span>Puestos
+					</a>
+				</li>
+
+				<li>
+					<a href="{{ route('areas.index') }}" >
+						<span class="fa fa-medkit icon-menu"></span>Areas
+					</a>
+				</li>
+
+				<li>
+					<a href="{{ route('diagnosticos.index') }}" >
+						<span class="fa fa-medkit icon-menu"></span>Diagnosticos
+					</a>
+				</li>
+
+				<li>
+					<a href="{{ route('partes_cuerpo.index') }}" >
+						<span class="fa fa-medkit icon-menu"></span>Partes_cuerpo
+					</a>
+				</li>
+	
+	
 				<li class="item-submenu" menu="1">
 					<a href="#"><span class="fa fa-list-alt icon-menu"></span>Pase Médico</a>
 					<ul class="submenu">
