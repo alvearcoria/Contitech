@@ -18,4 +18,11 @@ class Paciente extends Model
 			$query->where("nombre_pac","like","%".$name."%");
 		}
 	}
+
+	public function incapacidad(){
+    	return $this->hasMany(Incapacidad::class, 'id_paciente');
+	}
 }
+
+
+//http://localhost/incapacidades/3/edit

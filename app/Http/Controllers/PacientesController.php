@@ -106,6 +106,24 @@ class PacientesController extends Controller
                                     ->with('success','Los datos del paciente han sido actualizados correctamente');
     }
 
+      /**
+     * Show all pacientes order by date create.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function find(Request $request){
+
+        $search = $request->get('search');
+        $pacientes = new Paciente();
+
+        $pacientes = Paciente::name($search)
+                    ->orderBy('id_paciente','ASC')
+                    ->sortable()
+                    ->paginate(50);
+
+        return view('pacientes.find', compact('pacientes'));
+    }
+
     /**
      * Remove the specified resource from storage.
      *

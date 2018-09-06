@@ -17,40 +17,69 @@
 						<span class="fa fa-home icon-menu"></span>Inicio
 					</a>
 				</li>
-			
+
+				@if(Auth::user()->permisos_user=="E")
+				<li class="item-submenu" menu="1">
+					<a href="#"><span class="fa fa-book icon-menu"></span>Catálogos</a>
+					<ul class="submenu">
+						<li class="title-menu"><span class="fa fa-book icon-menu"></span>Catálogo</li>
+						<li class="go-back">Atras</li>
+						<li>
+							<a href="{{ route('pacientes.index') }}" >
+								<span class="fa fa-users icon-menu"></span>Pacientes
+							</a>
+						</li>
+
+						<li>
+							<a href="{{ route('plantas.index') }}" >
+								<span class="fa fa-industry icon-menu"></span>Plantas
+							</a>
+						</li>
+
+						<li>
+							<a href="{{ route('puestos.index') }}" >
+								<span class="fa fa-address-book icon-menu"></span>Puestos
+							</a>
+						</li>
+
+						<li>
+							<a href="{{ route('areas.index') }}" >
+								<span class="fa fa-project-diagram icon-menu"></span>Áreas
+							</a>
+						</li>
+
+						<li>
+							<a href="{{ route('diagnosticos.index') }}" >
+								<span class="fa fa-file-medical-alt icon-menu"></span>Diagnosticos
+							</a>
+						</li>
+
+						<li>
+							<a href="{{ route('partes_cuerpo.index') }}" >
+								<span class="fa fa-diagnoses icon-menu"></span>Partes del cuerpo
+							</a>
+						</li>
+
+								
+					</ul>
+				</li>
+				@endif
+
 				<li>
-					<a href="{{ route('pacientes.index') }}" >
-						<span class="fa fa-users icon-menu"></span>Pacientes
+					<a href="{{ route('accidentes.index') }}" >
+						<span class="fa fa-band-aid icon-menu"></span>Accidentabilidad
+					</a>
+				</li>
+				
+				<li>
+					<a href="{{ route('incapacidades.index') }}" >
+						<span class="fa fa-procedures icon-menu"></span>Incapacidad
 					</a>
 				</li>
 
 				<li>
-					<a href="{{ route('plantas.index') }}" >
-						<span class="fa fa-industry icon-menu"></span>Plantas
-					</a>
-				</li>
-
-				<li>
-					<a href="{{ route('puestos.index') }}" >
-						<span class="fa fa-medkit icon-menu"></span>Puestos
-					</a>
-				</li>
-
-				<li>
-					<a href="{{ route('areas.index') }}" >
-						<span class="fa fa-medkit icon-menu"></span>Areas
-					</a>
-				</li>
-
-				<li>
-					<a href="{{ route('diagnosticos.index') }}" >
-						<span class="fa fa-medkit icon-menu"></span>Diagnosticos
-					</a>
-				</li>
-
-				<li>
-					<a href="{{ route('partes_cuerpo.index') }}" >
-						<span class="fa fa-medkit icon-menu"></span>Partes_cuerpo
+					<a href="{{ route('indicadores.index') }}" >
+						<span class="fa fa-chart-line icon-menu"></span>Indicadores
 					</a>
 				</li>
 

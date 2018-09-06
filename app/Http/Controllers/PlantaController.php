@@ -5,8 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Planta;
 
+use SelNutricion\Http\Controllers\Session;
+use Illuminate\Support\Facades\Auth;
+
 class PlantaController extends Controller
 {
+
+     public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +22,6 @@ class PlantaController extends Controller
      */
     public function index()
     {
-         
         $plantas = new Planta();
 
         $plantas = Planta::all();
